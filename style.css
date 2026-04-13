@@ -74,3 +74,13 @@ body {
   transform: scale(1.1);
   color: #a5b3db;
 }
+
+.icons a {
+  text-decoration: none !important;
+  border: none;
+}
+
+.icons a i {
+  text-decoration: none !important;
+  display: inline-block;
+}
