@@ -8,15 +8,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
+
+  <!-- AUDIO -->
+  <audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
   <div class="container">
     <div class="centered">
       <h1>7</h1>
+
+      <!-- PLAY BUTTON -->
+      <button id="playBtn">tap to enter</button>
+
       <div class="icons">
         <a href="https://discord.gg/celine" target="_blank" title="Website">
           <i class="fas fa-globe"></i>
         </a>
-        <a href="https://t.me/wth29" target="_blank" title="Instagram">
-          <i class="fab fa-telegram"></i>
+        <a href="https://instagram.com/73fq" target="_blank" title="Instagram">
+          <i class="fab fa-instagram"></i>
         </a>
         <a href="https://discord.com/users/105319454656729088" target="_blank" title="Discord">
           <i class="fab fa-discord"></i>
@@ -24,5 +34,16 @@
       </div>
     </div>
   </div>
+
+  <script>
+    const btn = document.getElementById("playBtn");
+    const music = document.getElementById("bgMusic");
+
+    btn.addEventListener("click", () => {
+      music.play();
+      btn.style.display = "none";
+    });
+  </script>
+
 </body>
 </html>
