@@ -4,8 +4,21 @@
   box-sizing: border-box;
 }
 
+/* REMOVE ALL LINK ARTIFACTS */
+a,
+a:visited,
+a:active,
+a:hover {
+  text-decoration: none !important;
+  border: none !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* BODY */
 body {
-  background: white;
+  height: 100vh;
+  background-color: white;
   font-family: 'Segoe UI', sans-serif;
   overflow: hidden;
 }
@@ -26,33 +39,33 @@ body {
   color: #bcc7e8;
 
   cursor: pointer;
-
   background: white;
 
   z-index: 999;
-
   transition: opacity 0.4s ease;
 }
 
-/* MAIN (hidden at start) */
+/* MAIN FADE IN */
 #main {
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
-/* ORIGINAL CONTENT */
+/* CONTAINER */
 .container {
   position: relative;
   width: 100%;
   height: 100vh;
 }
 
+/* CENTER CONTENT */
 .centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+
   color: #bcc7e8;
   text-shadow: 0 0 8px rgba(188, 199, 232, 0.5);
 }
@@ -62,25 +75,38 @@ body {
   margin-bottom: 20px;
 }
 
+/* ICONS */
 .icons a {
   margin: 0 12px;
+  display: inline-flex; /* fixes baseline issues */
+  align-items: center;
+  justify-content: center;
+
   color: #bcc7e8;
   font-size: 2rem;
+
   text-shadow: 0 0 8px rgba(188, 199, 232, 0.5);
+
   transition: transform 0.2s ease, color 0.3s;
 }
 
+/* IMPORTANT: removes weird underline/line artifacts */
+.icons a i {
+  display: block;
+  line-height: 1;
+}
+
+/* HOVER */
 .icons a:hover {
   transform: scale(1.1);
   color: #a5b3db;
 }
 
-.icons a {
-  text-decoration: none !important;
-  border: none;
-}
-
-.icons a i {
-  text-decoration: none !important;
-  display: inline-block;
+/* OPTIONAL CHARACTER IMAGE */
+.character {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-height: 90vh;
+  pointer-events: none;
 }
