@@ -1,47 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>so tired</title>
+
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
 </head>
+
 <body>
 
-  <!-- AUDIO -->
-  <audio id="bgMusic" loop>
-    <source src="friends.mp3" type="audio/mpeg">
-  </audio>
+  <!-- ENTER SCREEN -->
+  <div id="enter">enter</div>
 
-  <div class="container">
-    <div class="centered">
-      <h1>7</h1>
+  <!-- MAIN CONTENT -->
+  <div id="main">
 
-      <!-- PLAY BUTTON -->
-      <button id="playBtn">tap to enter</button>
+    <div class="container">
+      <div class="centered">
+        <h1>7</h1>
 
-      <div class="icons">
-        <a href="https://discord.gg/celine" target="_blank" title="Website">
-          <i class="fas fa-globe"></i>
-        </a>
-        <a href="https://instagram.com/73fq" target="_blank" title="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://discord.com/users/105319454656729088" target="_blank" title="Discord">
-          <i class="fab fa-discord"></i>
-        </a>
+        <div class="icons">
+          <a href="https://heal.tf" target="_blank">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="https://instagram.com/hfby" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://discord.com/users/105319454656729088" target="_blank">
+            <i class="fab fa-discord"></i>
+          </a>
+        </div>
       </div>
     </div>
+
   </div>
 
+  <!-- AUDIO -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
   <script>
-    const btn = document.getElementById("playBtn");
+    const enter = document.getElementById("enter");
+    const main = document.getElementById("main");
     const music = document.getElementById("bgMusic");
 
-    btn.addEventListener("click", () => {
+    enter.addEventListener("click", () => {
       music.play();
-      btn.style.display = "none";
+
+      // fade out enter screen
+      enter.style.opacity = "0";
+      setTimeout(() => {
+        enter.style.display = "none";
+        main.style.opacity = "1";
+      }, 400);
     });
   </script>
 
