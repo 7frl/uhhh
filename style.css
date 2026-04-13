@@ -27,8 +27,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #bcc7e8; /* light blue tint */
-  text-shadow: 0 0 8px rgba(188, 199, 232, 0.5); /* soft glow */
+  color: #bcc7e8;
+  text-shadow: 0 0 8px rgba(188, 199, 232, 0.5);
 }
 
 .centered h1 {
@@ -40,13 +40,13 @@ body {
   margin: 0 12px;
   color: #bcc7e8;
   font-size: 2rem;
-  text-shadow: 0 0 8px rgba(188, 199, 232, 0.5); /* glow on icons */
+  text-shadow: 0 0 8px rgba(188, 199, 232, 0.5);
   transition: transform 0.2s ease, color 0.3s;
 }
 
 .icons a:hover {
   transform: scale(1.1);
-  color: #a5b3db; /* slightly darker on hover */
+  color: #a5b3db;
 }
 
 .character {
@@ -54,5 +54,21 @@ body {
   bottom: 0;
   right: 0;
   max-height: 90vh;
-  pointer-events: none; /* so it doesn’t block anything */
+  pointer-events: none;
+}
+
+/* PLAY BUTTON */
+#playBtn {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: transparent;
+  border: 1px solid #bcc7e8;
+  color: #bcc7e8;
+  cursor: pointer;
+  text-shadow: 0 0 8px rgba(188, 199, 232, 0.5);
+}
+
+#playBtn:hover {
+  background: rgba(188, 199, 232, 0.1);
 }
