@@ -4,17 +4,43 @@
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-}
-
 body {
-  height: 100vh;
-  background-color: white;
+  background: white;
   font-family: 'Segoe UI', sans-serif;
   overflow: hidden;
 }
 
+/* ENTER SCREEN */
+#enter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+  color: #bcc7e8;
+
+  cursor: pointer;
+
+  background: white;
+
+  z-index: 999;
+
+  transition: opacity 0.4s ease;
+}
+
+/* MAIN (hidden at start) */
+#main {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* ORIGINAL CONTENT */
 .container {
   position: relative;
   width: 100%;
@@ -47,28 +73,4 @@ body {
 .icons a:hover {
   transform: scale(1.1);
   color: #a5b3db;
-}
-
-.character {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  max-height: 90vh;
-  pointer-events: none;
-}
-
-/* PLAY BUTTON */
-#playBtn {
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  background: transparent;
-  border: 1px solid #bcc7e8;
-  color: #bcc7e8;
-  cursor: pointer;
-  text-shadow: 0 0 8px rgba(188, 199, 232, 0.5);
-}
-
-#playBtn:hover {
-  background: rgba(188, 199, 232, 0.1);
 }
